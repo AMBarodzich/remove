@@ -1,0 +1,16 @@
+- hosts: localhost
+  tasks:
+    - name: create file
+      shell: touch touch.txt
+
+    - name: stop postgres
+      debug:
+        msg: stop postgres
+      tags:
+        - stop
+
+    - name: start postgresql
+      debug:
+        msg: start postgresql
+      tags:
+        - start
